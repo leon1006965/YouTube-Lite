@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- mostly ignored on iOS but harmless -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>YouTube Lite</title>
+
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #000;
+      overflow: hidden;
+    }
+    #container {
+      width: 100%;
+      height: 100%;
+      text-align: center;           /* horizontal center */
+      position: relative;
+    }
+    #logo {
+      max-width: 92%;
+      max-height: 92%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);  /* iOS 4+ */
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <img id="logo" src="logo.jpg" alt="YouTube Lite">
+  </div>
+
+  <script type="text/javascript">
+    // Very old-school syntax, works back to iOS 3–4 era
+    function goToYouTube() {
+      window.open("https://www.youtube.com", "_blank");
+      // Optional: also load in current tab after opening new one
+      // window.location = "https://www.youtube.com";
+    }
+
+    // 4 seconds = 4000 ms
+    setTimeout(goToYouTube, 4000);
+  </script>
+
+</body>
+</html>
